@@ -1,4 +1,5 @@
 <html lang="en">
+<script src="https://kit.fontawesome.com/1dd1f69d41.js" crossorigin="anonymous"></script>
   <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,7 +23,8 @@
 				<a href="burgertest.php" style="margin-left: 20px;"> Burgers </a> 
 				
 				<a href="addons.php" style="margin-left: 20px;"> Add-Ons  </a> 
-				<a href="deleteburgers.php" style="margin-left: 20px;"> Remove Burgers </a> 
+				<a href="deleteburgers.php" style="margin-left: 20px;"> Remove Burgers </a>
+				<a href="cart.php"> <i class="fa-solid fa-cart-shopping"></i> </a> 
 				<a href="index.php" style="margin-left: 20px; color: red"> Logout  </a>
 			</div>
 		</div>

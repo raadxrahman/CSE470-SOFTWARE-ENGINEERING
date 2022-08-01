@@ -23,6 +23,7 @@
 				<a href="burgertest.php" style="margin-left: 20px;"> Burgers </a> 
 				<a href="addons.php" style="margin-left: 20px;"> Add-Ons  </a> 
 				<a href="deleteaddons.php" style="margin-left: 20px;"> Remove Add-Ons </a>
+				<a href="cart.php"> <i class="fa-solid fa-cart-shopping"></i> </a>
 				<a href="index.php" style="margin-left: 20px; color: red"> Logout  </a>
 			</div>
 		</div>
