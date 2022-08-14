@@ -30,7 +30,7 @@
 	</section>
 	
 	<section id = "section1">
-		<div class="title" style="color: black;background:white; opacity:90%;"> Add-Ons </div>
+		<div class="title" style="color: black;background:white; opacity:90%;"> Jobs </div>
 		<div style="margin-left:10%; margin-right:10%; margin-top:50px; margin-bottom:50px;text-align:center;background:white; opacity:95%;">
 			<div class="row" style="padding:5px;"> 
 				<div class="col-md-4" style="font-size:25px; color: #F2674A;font-family: Verdana;">  Job Id </div>
