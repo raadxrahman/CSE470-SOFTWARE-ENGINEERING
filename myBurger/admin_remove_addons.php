@@ -5,21 +5,24 @@
 <link rel="stylesheet" href="style.css" />
 <div class="sidenav" style = "background-image: url(https://i.pinimg.com/originals/9b/88/7c/9b887c9510b7abc8d1749712c702a6f8.jpg); background-size: contain ; background-repeat: no-repeat ; background-attachment: fixed ; width: 30% ; opacity : 95%" >
          <div class="login-main-text"> 
-            <h2 style = "font-size : 70px">Burger,<br> Reloaded</h2>
+            <h2 style = "font-size : 70px ; color:red;">Burger,<br> Reloaded</h2>
             <p "font-size: 40px">Best Burgers in Town </p>
          </div>
       </div>
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form action ="removeburgers.php" class="form_design" method="post">
+               <form action ="admin_remove_addons_backend.php" class="form_design" method="post">
                  <div class="form-group">
-                     <label style = "font-weight : bold ; font-family : Courier New">Insert Burger Id</label>
-                     <input type="text" name = "id" class="form-control" placeholder="Burger Id">
+                     <label style = "font-weight : bold ; color: red ; font-family : Courier New">Insert Add-On Id</label>
+                     <input type="text" name = "id" class="form-control" placeholder="Add-On Id">
                   </div>
                   <input type="submit" value="Delete Burger from Database">
                   
                </form>
+               <a href="admin_addons.php">
+               <button type="submit" class="btn btn-secondary">Addons</button>
+                     </a>
             </div>
          </div>
       </div>

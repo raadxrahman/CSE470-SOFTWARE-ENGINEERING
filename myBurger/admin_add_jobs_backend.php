@@ -3,14 +3,13 @@
 require_once('DBconnect.php');
 
 // we need to check if the input in the form textfields are not empty
-if(isset($_POST['id']) && isset($_POST['name']) && isset($_POST['size']) && isset($_POST['price'])){
+if(isset($_POST['job_id']) && isset($_POST['designation']) && isset($_POST['vacancy'])){
 	// write the query to check if this username and password exists in our database
-	$u = $_POST['id'];
-	$p = $_POST['name'];
-	$c = $_POST['size'];
-	$a = $_POST['price'];
+	$u = $_POST['job_id'];
+	$p = $_POST['designation'];
+	$a = $_POST['vacancy'];
 	
-	$sql = " INSERT INTO burger VALUES( '$u', '$p', '$c', '$a' ) ";
+	$sql = " INSERT INTO job_listings VALUES( '$u', '$p', '$a' ) ";
 	
 	//Execute the query 
 	$result = mysqli_query($conn, $sql);
@@ -19,11 +18,11 @@ if(isset($_POST['id']) && isset($_POST['name']) && isset($_POST['size']) && isse
 	if(mysqli_affected_rows($conn)){
 	
 		//echo "Inseted Successfully";
-		header("Location: burgertest.php");
+		header("Location: admin_jobs.php");
 	}
 	else{
 		//echo "Insertion Failed";
-		header("Location: add_items.php");
+		header("Location: admin_add_jobs.php");
 	}
 	
 }

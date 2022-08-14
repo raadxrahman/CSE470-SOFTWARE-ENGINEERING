@@ -18,28 +18,27 @@
     <!-- following section is used for creating the menubar in the webpage -->
 	<section id="header">
 		<div class="row">  
-			<div class="col-md-2" style="font-size: 35px;color:#F2674A; font-family: Times New Roman;"> <a href ="hometest.php">Burger, </br>Reloaded </a></div>
+			<div class="col-md-2" style="font-size: 35px; font-family: Times New Roman;"> <a href ="admin_home.php">Burger, </br>Reloaded </a></div>
 			<div class="col-md-10" style="text-align: right"> <br>
-				<a href="burgertest.php" style="margin-left: 20px;"> Burgers </a> 
 				
-				<a href="addons.php" style="margin-left: 20px;"> Add-Ons  </a> 
-				<a href="deleteburgers.php" style="margin-left: 20px;"> Remove Burgers </a>
-				<a href="cart.php"> <i class="fa-solid fa-cart-shopping"></i> </a> 
-				<a href="index.php" style="margin-left: 20px; color: red"> Logout  </a>
+				<a href="customer_burgers.php" style="margin-left: 20px;"> <i class="fa-solid fa-burger"></i> </a> 
+				<!-- <a href="addons.php" style="margin-left: 20px;"> Add-Ons  </a>  -->
+				<!-- <a href="admin_remove_addons.php" style="margin-left: 20px;"> Delete Add-Ons </a> -->
+				<!-- <a href="admin_jobs.php" style="margin-left: 20px;"> Jobs  </a> -->
+				<a href="customer_cart.php" style='margin-left:20px;'> <i class="fa-solid fa-cart-shopping"></i> </a> 
+
+				<a href="customer_login.php" style="margin-left: 20px; color: red"> Logout  </a>
 			</div>
 		</div>
 	</section>
 	
 	<section id = "section1">
-		<div class="title" style="color: black;background:white; opacity:90%;"> Our Burgers </div>
-		<div style="color: black; margin-left:10%; margin-right:10%; margin-top:50px; margin-bottom:50px;text-align:center;background:white; opacity:95%;">
+		<div class="title" style="color: black;background:white; opacity:90%;"> Add-Ons </div>
+		<div style="margin-left:10%; margin-right:10%; margin-top:50px; margin-bottom:50px;text-align:center;background:white; opacity:95%;">
 			<div class="row" style="padding:5px;"> 
-				<div class="col-md-3" style="font-size:23px; color: #F2674A;font-family: Verdana;">   ID </div>
-				<div class="col-md-3"style="font-size:23px; color: #F2674A;font-family: Verdana;">  BURGER NAME </div>
-				<div class="col-md-3"style="font-size:23px; color: #F2674A;font-family: Verdana;">  SIZE </div>
-				<div class="col-md-3"style="font-size:23px; color: #F2674A;font-family: Verdana;">  PRICE </div>
-			
-
+				<div class="col-md-4" style="font-size:25px; color: #F2674A;font-family: Verdana;">  ID </div>
+				<div class="col-md-4"style="font-size:25px; color: #F2674A;font-family: Verdana; ">  ADD-ON </div>
+				<div class="col-md-4"style="font-size:25px; color: #F2674A;font-family: Verdana;">  PRICE </div>
 		
 			</div>
 			
@@ -47,7 +46,7 @@
 			
 			<?php 
 			require_once("DBconnect.php");
-			$sql = "SELECT * FROM burger";
+			$sql = "SELECT * FROM addons";
 			$result = mysqli_query($conn, $sql);
 			if(mysqli_num_rows($result) > 0){
 				
@@ -55,17 +54,16 @@
 				
 			?>
 			<div class="row" style="padding:5px;"> 
-				<div class="col-md-3">  <?php echo $row[0]; ?> </div>
-				<div class="col-md-3">  <?php echo $row[1]; ?> </div>
-				<div class="col-md-3">  <?php echo $row[2] ?>
-				</div>
+				<div class="col-md-4">  <?php echo $row[0]; ?> </div>
+				<div class="col-md-4">  <?php echo $row[1]; ?> </div>
+				<div class="col-md-4">  <?php echo $row[2] ?> 
+
 				
-				<div class="col-md-3">  <?php echo $row[3] ?> 
-		
-				<form action="removeburgers.php" method="POST">
-				<input type="hidden" name="id" value=<?php echo $row[0] ?>>
+				<form action="customer_add_to_cart_backend.php" method="POST"><input type="hidden" name="addon_id" value=<?php echo $row[0] ?>>
 				<input type="submit" button type="button" class="btn btn-primary" style="background-color:red; font-size:10px; border-radius:12px;" 
-				name="submit" value="Delete"></button></form>
+				name="submit" value="Add"></button></form>
+				
+				
 				</div>
 				
 				
@@ -90,16 +88,16 @@
 
        
         
-        <div class="border border-light p-3 mb-4">
+        <!-- <div class="border border-light p-3 mb-4">
         
           <div class="text-center">
-            <button type="button" class="btn btn-primary" style="background-color:green;border-radius: 12px;"> <a href="add_items.php">Add Burgers</a></button>
+            <button type="button" class="btn btn-primary"style="background-color:green;border-radius: 12px;"> <a href="admin_add_addons.php">Add Add-Ons</a></button>
 			
           </div>
         
         </div>
     
-      </div>
+      </div> -->
 	</section>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

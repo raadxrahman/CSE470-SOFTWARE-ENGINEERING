@@ -3,13 +3,15 @@
 require_once('DBconnect.php');
 
 // we need to check if the input in the form textfields are not empty
-if(isset($_POST['id']) && isset($_POST['name']) && isset($_POST['price'])){
+if(isset($_POST['burger_id']) && isset($_POST['burger_name']) && isset($_POST['burger_size']) && isset($_POST['burger_price']) ){
 	// write the query to check if this username and password exists in our database
-	$u = $_POST['id'];
-	$p = $_POST['name'];
-	$a = $_POST['price'];
+	$c = $_POST['burger_id'];
+	$n = $_POST['burger_name'];
+	$p = $_POST['burger_size'];
+	$a = $_POST['burger_price'];
+    // $cp = $_POST['customer_password'];
 	
-	$sql = " INSERT INTO add_ons VALUES( '$u', '$p', '$a' ) ";
+	$sql = " INSERT INTO burgers VALUES( '$c', '$n', '$p', '$a') ";
 	
 	//Execute the query 
 	$result = mysqli_query($conn, $sql);
@@ -18,11 +20,11 @@ if(isset($_POST['id']) && isset($_POST['name']) && isset($_POST['price'])){
 	if(mysqli_affected_rows($conn)){
 	
 		//echo "Inseted Successfully";
-		header("Location: addons.php");
+		header("Location: admin_burgers.php");
 	}
 	else{
 		//echo "Insertion Failed";
-		header("Location: add_addons.php");
+		header("Location: admin_add_burgers.php");
 	}
 	
 }

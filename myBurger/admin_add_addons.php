@@ -12,14 +12,26 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form action ="removeaddons.php" class="form_design" method="post">
+               <form action ="admin_insert_addons_backend.php" class="form_design" method="post">
                  <div class="form-group">
-                     <label style = "font-weight : bold ; font-family : Courier New">Insert Add-On Id</label>
+                     <label style = "font-weight : bold ; font-family : Courier New">Id</label>
                      <input type="text" name = "id" class="form-control" placeholder="Add-On Id">
                   </div>
-                  <input type="submit" value="Delete Burger from Database">
+                  <div class="form-group">
+                     <label style = "font-weight : bold ; font-family : Courier New">Add-On Name</label>
+                     <input type="text" name = "name" class="form-control" placeholder="Add-On Name">
+                  </div>
+				  
+				  <div class="form-group">
+                     <label style = "font-weight : bold ; font-family : Courier New">Price</label>
+                     <input type="text" name = "price" class="form-control" placeholder="Add-On Price">
+                  </div>
+                  <input type="submit" value="Add Add-On to Database">
                   
                </form>
+               <a href="admin_addons.php">
+               <button type="submit" class="btn btn-secondary">Addons</button>
+                     </a>
             </div>
          </div>
       </div>

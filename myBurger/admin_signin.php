@@ -9,12 +9,12 @@ if(isset($_POST['fname']) && isset($_POST['pass'])){
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result) != 0){
 		//echo "Enter";
-		header("Location: hometest.php");
+		header("Location: admin_home.php");
 		
 	}
 	else{
 		//echo "/Password Wrong";
-		header("Location: index.php");
+		header("Location: admin_login.php");
 		
 	}
 

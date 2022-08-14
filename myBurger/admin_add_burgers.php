@@ -5,33 +5,42 @@
 <link rel="stylesheet" href="style.css" />
 <div class="sidenav" style = "background-image: url(https://i.pinimg.com/originals/9b/88/7c/9b887c9510b7abc8d1749712c702a6f8.jpg); background-size: contain ; background-repeat: no-repeat ; background-attachment: fixed ; width: 30% ; opacity : 95%" >
          <div class="login-main-text"> 
-            <h2 style = "font-size : 70px">Burger,<br> Reloaded</h2>
+            <h2 style = "font-size : 70px ; color: red;">Burger,<br> Reloaded</h2>
             <p "font-size: 40px">Best Burgers in Town </p>
          </div>
       </div>
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form action ="insert_items.php" class="form_design" method="post">
+               <form action ="admin_add_burgers_backend.php" class="form_design" method="post">
                  <div class="form-group">
-                     <label style = "font-weight : bold ; font-family : Courier New">Id</label>
-                     <input type="text" name = "id" class="form-control" placeholder="Burger Id">
+                     <label style = "font-weight : bold ; font-family : Courier New">Burger Id</label>
+                     <input type="text" name = "burger_id" class="form-control" placeholder="Burger Id">
                   </div>
+
                   <div class="form-group">
                      <label style = "font-weight : bold ; font-family : Courier New">Burger Name</label>
-                     <input type="text" name = "name" class="form-control" placeholder="Burger Name">
+                     <input type="text" name = "burger_name" class="form-control" placeholder="Burger Name">
                   </div>
+				  
 				  <div class="form-group">
                      <label style = "font-weight : bold ; font-family : Courier New">Size</label>
-                     <input type="text" name = "size" class="form-control" placeholder="Burger Size">
+                     <input type="text" name = "burger_size" class="form-control" placeholder="Size">
                   </div>
-				  <div class="form-group">
+
+                  <div class="form-group">
                      <label style = "font-weight : bold ; font-family : Courier New">Price</label>
-                     <input type="text" name = "price" class="form-control" placeholder="Burger Price">
+                     <input type="text" name = "burger_price" class="form-control" placeholder="Price">
                   </div>
-                  <input type="submit" value="Add Burger to Database">
+
+                  
+
+                  <input type="submit" value="Add Burger">
                   
                </form>
+               <a href="admin_burgers.php">
+               <button type="submit" class="btn btn-secondary">Burgers</button>
+                     </a>
             </div>
          </div>
       </div>

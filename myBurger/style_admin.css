@@ -1,20 +1,20 @@
 body {
     font-family: "Italic", Times new roman;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(65, 65, 65);
 }
 
 
 
 .main-head{
     height: 110px;
-    background-color: #808080;
+    background-color: rgb(255, 255, 255);
 	
    
 }
 
 .sidenav {
     height: 100%;
-    background-color: #000;
+    background-color: rgb(55, 255, 0);
     overflow-x: visible;
     padding-top: 100px;
 }
@@ -64,7 +64,7 @@ body {
 .login-main-text{
     margin-top: 20%;
     padding: 60px;
-    color: #fff;
+    color: black;
 }
 
 .login-main-text h2{

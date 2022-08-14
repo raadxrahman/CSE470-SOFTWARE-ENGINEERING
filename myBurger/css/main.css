@@ -16,7 +16,7 @@ Created By: Faisal Ashraf.
  background: -o-linear-gradient(top, #fff, #000000);
 */
 #header{
-	background-color: #FFF;
+	background-color: rgb(255, 255, 255);
 	color: black;
 	font: 600 18px/24px Times New Roman;
 	padding: 30px;
